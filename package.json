@@ -1,0 +1,42 @@
+{
+  "name": "apexdatabuilder",
+  "version": "0.0.0",
+  "author": "Paul",
+  "bugs": "https://github.com/https://github.com/sfdcpaul/apexdatabuilder.git/https://github.com/sfdcpaul/apexdatabuilder.git/issues",
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/lib",
+    "/messages",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "homepage": "https://github.com/https://github.com/sfdcpaul/apexdatabuilder.git/https://github.com/sfdcpaul/apexdatabuilder.git",
+  "keywords": [
+    "sfdx-plugin"
+  ],
+  "license": "MIT",
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "sfdx",
+    "topics": {
+      "hello": {
+        "description": "Commands to say hello."
+      }
+    },
+    "devPlugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "https://github.com/sfdcpaul/apexdatabuilder.git/https://github.com/sfdcpaul/apexdatabuilder.git",
+  "scripts": {
+    "postpack": "rimraf oclif.manifest.json",
+    "posttest": "tslint -p test -t stylish",
+    "prepack": "rimraf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
